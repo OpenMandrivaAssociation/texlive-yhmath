@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-yhmath
 Version:	20070301
-Release:	1
+Release:	2
 Summary:	Extended maths fonts for LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/yhmath
