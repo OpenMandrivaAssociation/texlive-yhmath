@@ -1,12 +1,13 @@
-# revision 15878
+# revision 31155
 # category Package
 # catalog-ctan /fonts/yhmath
-# catalog-date 2007-03-01 23:46:20 +0100
+# catalog-date 2013-07-06 08:44:49 +0200
 # catalog-license lppl
-# catalog-version undef
+# catalog-version 1.1
 Name:		texlive-yhmath
-Version:	20070301
-Release:	2
+Epoch:		1
+Version:	1.1
+Release:	1
 Summary:	Extended maths fonts for LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/yhmath
@@ -20,7 +21,7 @@ Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 
 %description
-The yhmath bundle contains fonts (type in 1 format) and a LaTeX
+The yhmath bundle contains fonts (in type 1 format) and a LaTeX
 package for using them.
 
 %post
@@ -36,7 +37,6 @@ package for using them.
 %{_texmfdistdir}/fonts/map/dvips/yhmath/yhmath.map
 %{_texmfdistdir}/fonts/source/public/yhmath/yhbigacc.mf
 %{_texmfdistdir}/fonts/source/public/yhmath/yhbigdel.mf
-%{_texmfdistdir}/fonts/source/public/yhmath/yhcmex10.mf
 %{_texmfdistdir}/fonts/source/public/yhmath/yhmathex.mf
 %{_texmfdistdir}/fonts/source/public/yhmath/yrcmex10.mf
 %{_texmfdistdir}/fonts/tfm/public/yhmath/yhcmex10.tfm
@@ -45,11 +45,14 @@ package for using them.
 %{_texmfdistdir}/fonts/vf/public/yhmath/yhcmex10.vf
 %{_texmfdistdir}/tex/latex/yhmath/OMXyhex.fd
 %{_texmfdistdir}/tex/latex/yhmath/yhmath.sty
-%doc %{_texmfdistdir}/doc/latex/yhmath/yhmath.pdf
+%doc %{_texmfdistdir}/doc/fonts/yhmath/Makefile
+%doc %{_texmfdistdir}/doc/fonts/yhmath/README
+%doc %{_texmfdistdir}/doc/fonts/yhmath/yhcmex10.vpl
+%doc %{_texmfdistdir}/doc/fonts/yhmath/yhmath.pdf
 #- source
-%doc %{_texmfdistdir}/source/latex/yhmath/yhmath.drv
-%doc %{_texmfdistdir}/source/latex/yhmath/yhmath.dtx
-%doc %{_texmfdistdir}/source/latex/yhmath/yhmath.ins
+%doc %{_texmfdistdir}/source/fonts/yhmath/yhmath.drv
+%doc %{_texmfdistdir}/source/fonts/yhmath/yhmath.dtx
+%doc %{_texmfdistdir}/source/fonts/yhmath/yhmath.ins
 
 #-----------------------------------------------------------------------
 %prep
@@ -60,16 +63,3 @@ package for using them.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070301-2
-+ Revision: 757744
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070301-1
-+ Revision: 719965
-- texlive-yhmath
-- texlive-yhmath
-- texlive-yhmath
-
