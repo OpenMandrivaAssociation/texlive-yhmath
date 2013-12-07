@@ -7,7 +7,7 @@
 Name:		texlive-yhmath
 Epoch:		1
 Version:	1.1
-Release:	2
+Release:	3
 Summary:	Extended maths fonts for LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/yhmath
